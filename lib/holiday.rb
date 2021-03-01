@@ -14,7 +14,11 @@ def add_supply_to_memorial_day(holiday_hash, supply)
 end
 
 def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_array)
+<<<<<<< HEAD
   holiday_hash[season][holiday_name] = supply_array
+=======
+  holiday_hash[:season][:holiday_name] = [:supply_array]
+>>>>>>> f05bdd977d56b99df7870247675a0362542b987f
   holiday_hash
 end
 
@@ -23,6 +27,7 @@ def all_winter_holiday_supplies(holiday_hash)
 end
 
 def all_supplies_in_holidays(holiday_hash)
+<<<<<<< HEAD
   holiday_hash.each do |season, data|
     puts "#{season.to_s.capitalize!}:"
     data.each do |holiday, supply|
@@ -42,6 +47,12 @@ end
 
 def all_holidays_with_bbq(holiday_hash)
   answer = []
+=======
+  holiday_hash.values.flatten
+end
+
+def all_holidays_with_bbq(holiday_hash)
+>>>>>>> f05bdd977d56b99df7870247675a0362542b987f
   holiday_hash.each do |season, data|
     data.each do |holiday, value|
       value.each do |supply|
